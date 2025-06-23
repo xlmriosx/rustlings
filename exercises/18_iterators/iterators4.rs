@@ -10,10 +10,19 @@ fn factorial(num: u64) -> u64 {
     // - additional variables
     // For an extra challenge, don't use:
     // - recursion
+    let start = 1;
+    let end = num;
+    let fac_array: Vec<u64> = (start..=end).collect();
+    fac_array.into_iter().product::<u64>()
 }
 
 fn main() {
     // You can optionally experiment here.
+    // let start = 2;
+    // let end = 4;
+    // let fac_array: Vec<u64> = (start..=end).collect();
+    // let result_array = fac_array.into_iter().fold(1, |ant, pres| ant * pres);
+    // println!("{result_array:#?}");
 }
 
 #[cfg(test)]
